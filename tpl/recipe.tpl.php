@@ -1,6 +1,7 @@
 <?php include "./datas.php";
 
 //TODO
+//modier les datas pour avoir les quantites eds ingredients et attribut nbdepersonnes
 //faire un algo pour les pluriels de personnes
 // faire n algo pour avoir la recette en fct du nb de prsonnes
 // faire un mode édition 
