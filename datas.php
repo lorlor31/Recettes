@@ -3,9 +3,14 @@ $recipes=
     [
         [
             "name"=>"Pâtes sauce Oursonnet" ,
-            "ingredients"=>["pâtes","crème fraîche",
-                            "lardons","vin blanc","oignons",
-                            "sel, poivre, huile",
+            "persons"=> 4,
+            "ingredients"=> [
+                "pâtes"=>"1 kilo",
+                "crème fraîche"=>"50cl",
+                "lardons"=>"500g",
+                "vin blanc"=>"10cl",
+                "oignons"=>"2",
+                "sel, poivre, huile"=>"à votre goût",
                 ] ,
             "steps"=>
                 [

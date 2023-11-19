@@ -1,7 +1,13 @@
 <?php include "./datas.php";
 
+//TODO
+//faire un algo pour les pluriels de personnes
+// faire n algo pour avoir la recette en fct du nb de prsonnes
+// faire un mode édition 
+
 
 $name=$recipe['name'] ;
+$persons=$recipe['persons'] ;
 $ingredients=$recipe['ingredients'] ;
 $steps=$recipe['steps'] ;?>
 
@@ -19,10 +25,10 @@ $steps=$recipe['steps'] ;?>
 <main> 
     <h1> <?= $name ?> </h1>  
     <section class="section" id="ingredients">
-        <h2> Ingrédients </h2>
+        <h2> <?php echo "Ingrédients pour $persons personnes" ;?> </h2>
         <ul>
-        <?php foreach ($ingredients as $ingredient){?>
-        <li> <?=$ingredient?>  </li>
+        <?php foreach ($ingredients as $ingredient => $amount){?>
+        <li> <?php echo "$ingredient : $amount" ;?>  </li>
         <?php }?>
         </ul> 
     </section>
