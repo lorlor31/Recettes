@@ -1,3 +1,1 @@
-
-<?php ?>
-<a class="backToHome" href="../index.php"> Retour à l'accueil </a> ;
+<a class="backToHome" href="./index.php"> Retour à l'accueil </a> ;

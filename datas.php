@@ -1,10 +1,12 @@
-// créer un ingrédient selpoivrehuile=sph par exp
 <?php
 $recipes= 
     [
         [
             "name"=>"Pâtes sauce Oursonnet" ,
-            "ingredients"=>["pâtes","crème fraîche","lardons","vin blanc","oignons"] ,
+            "ingredients"=>["pâtes","crème fraîche",
+                            "lardons","vin blanc","oignons",
+                            "sel, poivre, huile",
+                ] ,
             "steps"=>
                 [
                     "faire cuire les pâtes",
@@ -16,7 +18,9 @@ $recipes=
         ],
         [
             "name"=>"Riz au skia" ,
-            "ingredients"=>["riz","chorizo","lardons","oeufs","oignons","etc"] ,
+            "ingredients"=>["riz","chorizo","lardons","oeufs","oignons",                             "sel, poivre, huile",
+            "sel, poivre, huile",
+            "etc"] ,
             "steps"=>
                 [
                     "faire une grosse omelette mi-cuite avec les oeufs et les réserver dans une assiette. ",
@@ -29,7 +33,8 @@ $recipes=
         ],
         [
             "name"=>"Poulet rôti" ,
-            "ingredients"=>["poulet","pommes de terre","oignons"] ,
+            "ingredients"=>["poulet","pommes de terre","oignons", "sel, poivre, huile",
+            ] ,
             "steps"=>
                 [
                     "chauffer le four à 210° environ ",
@@ -42,7 +47,7 @@ $recipes=
         ],
         [
             "name"=>"Rouelle de porc" ,
-            "ingredients"=>["rouelle de porc","moutarde","oignons","courgettes"] ,
+            "ingredients"=>["rouelle de porc","moutarde","oignons","courgettes","sel, poivre, huile",] ,
             "steps"=>
                 [
                     "chauffer le four à 190° environ ",
