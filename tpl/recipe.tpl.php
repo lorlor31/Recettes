@@ -7,9 +7,12 @@ $steps=$recipe['steps'] ;?>
 
 
 <main> 
+<!-- /*
  <h1 <?php if($name=='Riz au skia') { ?>
     class="titreRose "> 
             <?php }  ?> <?= $name ?> </h1>   
+            */ -->
+    <h1><?= $name ?> </h1>
     <section class="section" id="ingredients">
         <h2>
         <?php echo "Ingrédients pour $persons personnes" ;?> 

@@ -1,4 +1,5 @@
 <?php include "./datas.php";
+ include "./functions.php";
 $index=$_GET['id'];
 $recipe= $recipes[$index] ;
 $name=$recipe['name'] ;
