@@ -1,7 +1,7 @@
 <?php include "./datas.php";
 $index=$_GET['id'];
-var_dump($index);
 $recipe= $recipes[$index] ;
+$name=$recipe['name'] ;
 ?>
 
 <!DOCTYPE html>

@@ -9,15 +9,17 @@ $currentPage='index';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/recipe.css">
     <title> Index </title>
 </head>
 
 <body>
 
-<nav>
-    <?php foreach ($recipes as $index=>$recipe) { ?>
-        <a href="recipe.php?id=<?= $index; ?>"><?=$recipe['name']?> </a>
-    <?php } ?>
-</nav>
+<?php include "./tpl/nav.tpl.php" ;
+$currentPage='index';
+;?>
+
+</body>
 
 </html>
+

@@ -1,7 +1,7 @@
 <?php include "./datas.php";
 
-$name=$recipe['name'] ;
-$persons=$recipe['persons'] ;
+$name= $recipe['name'] ;
+$persons= $recipe['persons']  ;
 $ingredients=$recipe['ingredients'] ;
 $steps=$recipe['steps'] ;?>
 
@@ -16,7 +16,7 @@ $steps=$recipe['steps'] ;?>
         </h2>
         <ul>
         <?php foreach ($ingredients as $ingredient => $amount){?>
-        <li> <?php echo "$ingredient : $amount" ;?>  </li>
+        <li> <?php echo ucfirst("$ingredient : $amount" );?>  </li>
         <?php }?>
         </ul> 
     </section>
@@ -26,7 +26,7 @@ $steps=$recipe['steps'] ;?>
         <p>
             <ol>
             <?php foreach ($steps as $step){?>
-                <li> <?=$step?>  </li>
+                <li> <?php echo ucfirst($step)?>  </li>
             <?php }?>
             </ol>
         </p>

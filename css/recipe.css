@@ -3,16 +3,21 @@ body {
     padding: 0;
 }
 
-body, main, section, nav {
+body, main, section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
 section {
     margin: 1rem;
-    width: 100% ;
+    width: 70dvw ;
     background-color: lightpink;
     border: 5px solid darkred;
 }
