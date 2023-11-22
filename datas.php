@@ -20,11 +20,11 @@ $recipes=
                     "rajouter le vin blanc et la crème fraîche",
                     "rajouter les pâtes à la sauce !"
                 ],
-            "phpFile"=>"recipe0.php",
         ],
     2=>
         [
             "name"=>"Riz au skia" ,
+            "persons"=> 4,
             "ingredients"=>["riz","chorizo","lardons","oeufs","oignons",
             "sel, poivre, huile",
             "etc"] ,
@@ -36,7 +36,6 @@ $recipes=
                     "rajouter les oeufs et les casser grossièrement !",
                     "voilà c'est prêt !"
                 ],
-            "phpFile"=>"recipe1.php",
         ],
     3=> 
         [
@@ -51,7 +50,6 @@ $recipes=
                     "enfournez la bête une heure environ avec ses patates autour et un demi-verre d'eau !",
                     "voilà c'est prêt !"
                 ],
-            "phpFile"=>"recipe2.php",
         ],
     4=>    
         [
@@ -65,7 +63,6 @@ $recipes=
                     "enfournez la bête avec ses légumes autour!",
                     "voilà c'est prêt !"
                 ],
-            "phpFile"=>"recipe3.php",
         ],
     ];
 
