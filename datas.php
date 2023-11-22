@@ -70,7 +70,14 @@ $recipes=
         [
             "name"=>"Rouelle de porc" ,
             "persons"=> 4,
-            "ingredients"=>["rouelle de porc","moutarde","oignons","courgettes","sel, poivre, huile",] ,
+            "ingredients"=>
+                [
+                    "rouelle de porc"=>'1',
+                    "moutarde"=>"1 cuillère",
+                    "oignons"=>"2",
+                    "courgettes"=>"3",
+                    "sel, poivre, huile"=>"à votre goût",
+                ] ,
             "steps"=>
                 [
                     "chauffer le four à 190° environ ",

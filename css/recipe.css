@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-main, section {
+body, main, section, nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,7 +12,7 @@ main, section {
 
 section {
     margin: 1rem;
-    width: 70% ;
+    width: 100% ;
     background-color: lightpink;
     border: 5px solid darkred;
 }
