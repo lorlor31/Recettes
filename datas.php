@@ -5,13 +5,14 @@ $recipes=
         [
             "name"=>"Pâtes sauce Oursonnet" ,
             "persons"=> 4,
-            "ingredients"=> [
-                "pâtes"=>"1 kilo",
-                "crème fraîche"=>"50cl",
-                "lardons"=>"500g",
-                "vin blanc"=>"10cl",
-                "oignons"=>"2",
-                "sel, poivre, huile"=>"à votre goût",
+            "ingredients"=> 
+                [
+                    "pâtes"=>"1 kilo",
+                    "crème fraîche"=>"50cl",
+                    "lardons"=>"500g",
+                    "vin blanc"=>"10cl",
+                    "oignons"=>"2",
+                    "sel, poivre, huile"=>"à votre goût",
                 ] ,
             "steps"=>
                 [
@@ -25,9 +26,16 @@ $recipes=
         [
             "name"=>"Riz au skia" ,
             "persons"=> 4,
-            "ingredients"=>["riz","chorizo","lardons","oeufs","oignons",
-            "sel, poivre, huile",
-            "etc"] ,
+            "ingredients"=>
+                [
+                    "riz déjà cuit"=>"600g",
+                    "chorizo"=>"300g",
+                    "lardons"=>"200g",
+                    "oeufs"=>"4",
+                    "oignons"=>"2",
+                    "sel, poivre, huile"=>"à votre goût",
+                    "etc"=>"à votre goût",
+                ] ,
             "steps"=>
                 [
                     "faire une grosse omelette mi-cuite avec les oeufs et les réserver dans une assiette. ",
@@ -40,8 +48,15 @@ $recipes=
     3=> 
         [
             "name"=>"Poulet rôti" ,
-            "ingredients"=>["poulet","pommes de terre","oignons", "sel, poivre, huile",
-            ] ,
+            "persons"=> 4,
+            "ingredients"=>
+            [
+                "poulet"=>"1",
+                "pommes de terre"=>"500g",
+                "oignons"=>"1",
+                "sel, poivre, huile"=>"à votre goût",
+                "etc"=>"à votre goût",
+            ],
             "steps"=>
                 [
                     "chauffer le four à 210° environ ",
@@ -54,6 +69,7 @@ $recipes=
     4=>    
         [
             "name"=>"Rouelle de porc" ,
+            "persons"=> 4,
             "ingredients"=>["rouelle de porc","moutarde","oignons","courgettes","sel, poivre, huile",] ,
             "steps"=>
                 [
