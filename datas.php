@@ -1,6 +1,7 @@
 <?php
 $recipes= 
     [
+    1=>
         [
             "name"=>"Pâtes sauce Oursonnet" ,
             "persons"=> 4,
@@ -21,9 +22,10 @@ $recipes=
                 ],
             "phpFile"=>"recipe0.php",
         ],
+    2=>
         [
             "name"=>"Riz au skia" ,
-            "ingredients"=>["riz","chorizo","lardons","oeufs","oignons",                             "sel, poivre, huile",
+            "ingredients"=>["riz","chorizo","lardons","oeufs","oignons",
             "sel, poivre, huile",
             "etc"] ,
             "steps"=>
@@ -36,6 +38,7 @@ $recipes=
                 ],
             "phpFile"=>"recipe1.php",
         ],
+    3=> 
         [
             "name"=>"Poulet rôti" ,
             "ingredients"=>["poulet","pommes de terre","oignons", "sel, poivre, huile",
@@ -50,6 +53,7 @@ $recipes=
                 ],
             "phpFile"=>"recipe2.php",
         ],
+    4=>    
         [
             "name"=>"Rouelle de porc" ,
             "ingredients"=>["rouelle de porc","moutarde","oignons","courgettes","sel, poivre, huile",] ,

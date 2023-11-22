@@ -1,4 +1,6 @@
-<?php include "./datas.php" ;?>
+<?php include "./datas.php" ;
+$currentPage='index';
+;?>
 
 
 
@@ -7,14 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?=$name?> </title>
+    <title> Index </title>
 </head>
 
 <body>
 
 <nav>
-    <?php foreach ($recipes as $recipe) { ?>
-        <a href="./<?=$recipe['phpFile']?>" > <?=$recipe['name']?> </a>
+    <?php foreach ($recipes as $index=>$recipe) { ?>
+        <a href="recipe.php?id=<?= $index; ?>"><?=$recipe['name']?> </a>
     <?php } ?>
 </nav>
 
