@@ -3,8 +3,8 @@
 $name= $recipe['name'] ;
 $persons= $recipe['persons']  ;
 $ingredients=$recipe['ingredients'] ;
-$steps=$recipe['steps'] ;?>
-
+$steps=$recipe['steps'] ;
+$image=$recipe['image'] ;?>
 
 <main> 
 <!-- /*
@@ -13,15 +13,23 @@ $steps=$recipe['steps'] ;?>
             <?php }  ?> <?= $name ?> </h1>   
             */ -->
     <h1><?= $name ?> </h1>
-    <section class="section" id="ingredients">
-        <h2>
-        <?php echo "Ingrédients pour $persons personnes" ;?> 
-        </h2>
-        <ul>
-        <?php foreach ($ingredients as $ingredient => $amount){?>
-        <li> <?php echo ucfirst("$ingredient : $amount" );?>  </li>
-        <?php }?>
-        </ul> 
+    <section class="section" id="firstPart">
+        <div class="picture">
+            <h2>
+                <?= $name ?> 
+            </h2>
+            <img src="./images/<?=$image?>"/>
+        </div>
+        <div class="ingredients">
+            <h2>
+                <?php echo "Ingrédients pour $persons personnes" ;?> 
+            </h2>
+            <ul>
+                <?php foreach ($ingredients as $ingredient => $amount){?>
+                <li> <?php echo ucfirst("$ingredient : $amount" );?>  </li>
+                <?php }?>
+            </ul> 
+        </div>
     </section>
 
     <section class="section" id="etapes">

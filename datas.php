@@ -21,6 +21,7 @@ $recipes=
                     "rajouter le vin blanc et la crème fraîche",
                     "rajouter les pâtes à la sauce !"
                 ],
+            "image"=>"carbo.jpg",
         ],
     2=>
         [
@@ -44,6 +45,7 @@ $recipes=
                     "rajouter les oeufs et les casser grossièrement !",
                     "voilà c'est prêt !"
                 ],
+            
         ],
     3=> 
         [
