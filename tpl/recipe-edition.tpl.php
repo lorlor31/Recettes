@@ -15,10 +15,9 @@ $image=$recipe['image'] ;?>
     <h1>
         <?= $name ?> 
         <span class="editorModeButtonContainer">
-            <a class="editorModeButton"  href="./recipe-edition.php?id=<?= $index ?>"> </a> 
+            <a class="editorModeButton"  href="./recipe.php?id=<?= $index ?>"> </a>
             <span class="editorModeButtonInfo" > Mode edition </span>
         </span>
-       
         
 
         </button> 
@@ -32,7 +31,10 @@ $image=$recipe['image'] ;?>
         </div>
         <div class="ingredients">
             <h2>
-                <?php echo "Ingrédients pour $persons personnes" ;?> 
+                <!-- <?php echo "Ingrédients pour $persons personnes" ;?>  -->
+                Ingrédients pour 
+                <input type=number></input> 
+                personnes
             </h2>
             <ul>
                 <?php foreach ($ingredients as $ingredient => $amount){?>

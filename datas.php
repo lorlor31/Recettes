@@ -45,6 +45,7 @@ $recipes=
                     "rajouter les oeufs et les casser grossièrement !",
                     "voilà c'est prêt !"
                 ],
+            "image"=>"riz.jpg",
             
         ],
     3=> 
@@ -67,6 +68,7 @@ $recipes=
                     "enfournez la bête une heure environ avec ses patates autour et un demi-verre d'eau !",
                     "voilà c'est prêt !"
                 ],
+            "image"=>"poulet.jpg",
         ],
     4=>    
         [
@@ -88,6 +90,7 @@ $recipes=
                     "enfournez la bête avec ses légumes autour!",
                     "voilà c'est prêt !"
                 ],
+            "image"=>"rouelle.jpg",    
         ],
     ];
 
