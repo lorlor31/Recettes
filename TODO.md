@@ -1,3 +1,12 @@
+#TODO 25NOV2023
+plusierus pbs de concerption à résoude
+=> bouton /lien pour toggler de la recette edition ou pas ?? 
+1/ si c un lien => on change de page, on voit pas l'naimation 
+2/ si c un bouton, on arrive à changer de page mais le lien n'est actif que sur le a pas sur le button
+=> calcul des quantités , le faire niveau client ouserveur ?
+niveau back on a les données, mias comment récupérer l'input du nb de personnes ?
+niveau client : on n'a pas récupéré les datas ? il va falloir le faire ??
+
 
 #TODO
 - reussir à dynamiser les liens des articles pour n'avoir plus qu'n seul recipe.php

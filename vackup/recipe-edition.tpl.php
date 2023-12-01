@@ -1,10 +1,15 @@
 <?php include "./datas.php";
 
+//Variables crrspdt aux datas
 $name= $recipe['name'] ;
 $persons= $recipe['persons']  ;
 $ingredients=$recipe['ingredients'] ;
 $steps=$recipe['steps'] ;
-$image=$recipe['image'] ;?>
+$image=$recipe['image'] ;
+//Variables nécessaires
+$recipeModeTpl="recipeEdition" ;
+
+?>
 
 <main> 
 <!-- /*
@@ -14,18 +19,12 @@ $image=$recipe['image'] ;?>
             */ -->
     <h1>
         <?= $name ?> 
-        <span class="editorModeButtonContainer">
-            <a class="editorModeButton"  href="./recipe.php?id=<?= $index ?>"> </a>
-            <span class="editorModeButtonInfo" > Mode edition </span>
-        </span>
-        
-
-        </button> 
     </h1>
     <section class="section" id="firstPart">
         <div class="picture">
             <h2>
                 <?= $name ?> 
+                <?php include "./tpl/toggleEditionButton.tpl.php"; ?>
             </h2>
             <img src="./images/<?=$image?>"/>
         </div>

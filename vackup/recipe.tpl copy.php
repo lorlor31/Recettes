@@ -1,54 +1,48 @@
 <?php include "./datas.php";
-//Variables crrspdt aux datas
+
 $name= $recipe['name'] ;
 $persons= $recipe['persons']  ;
 $ingredients=$recipe['ingredients'] ;
 $steps=$recipe['steps'] ;
-$image=$recipe['image'] ;
-//Variables nécessaires
-$isActiveEditionMode=false ;
+$image=$recipe['image'] ;?>
+<link rel="stylesheet" href="./css/recipe.css">
+</head>
 
-?>
-
+<body>
 <main> 
 <!-- /*
  <h1 <?php if($name=='Riz au skia') { ?>
     class="titreRose "> 
-            <?php }  ?> 
-            <?= $name ?> </h1>   
+            <?php }  ?> <?= $name ?> </h1>   
             */ -->
     <h1>
         <?= $name ?> 
+        <span class="editorModeButtonContainer">
+            <a class="editorModeButton"  href="./recipe-edition.php?id=<?= $index ?>"> </a> 
+            <span class="editorModeButtonInfo" > Mode edition </span>
+        </span>
+       
+        
+
+        </button> 
     </h1>
-
-
     <section class="section" id="firstPart">
         <div class="picture">
             <h2>
-                <?= $name ?> pour  
-                <span class="numOfPers" data-persons= <?= $persons ?> > <?= $persons ?> </span> 
-                <?php include "./tpl/toggleEditionButton.tpl.php"; ?>
-
-                <label class="numOfPersLabel invisible" for="numOfPersInput" > <label>
-                <input class="numOfPersInput invisible" data-persons= <?= $persons ?>  type="number" name="numOfPersInput" value=<?= $persons ?> > </input> 
-                personnes
+                <?= $name ?> 
             </h2>
             <img src="./images/<?=$image?>"/>
         </div>
-
-
         <div class="ingredients">
+            <h2>
+                <?php echo "Ingrédients pour $persons personnes" ;?> 
+            </h2>
             <ul>
                 <?php foreach ($ingredients as $ingredient => $amount){?>
                 <li> <?php echo ucfirst("$ingredient : $amount" );?>  </li>
                 <?php }?>
             </ul> 
         </div>
-
-
-
-
-
     </section>
 
     <section class="section" id="etapes">

@@ -1,13 +1,22 @@
 console.log ("jjh") ;
 
 
-const editorModeButton=document.querySelector(".editorModeButton")
-const editorModeButtonContainer=document.querySelector(".editorModeButtonContainer") ;
+const editorModeButton=document.querySelector(".editorModeButton");
+const editorModeButtonContainerClickZone=document.querySelector(".editorModeButtonContainer-clickZone") ;
 const editorModeButtonInfo=document.querySelector(".editorModeButtonInfo") ;
+
+const numOfPers=document.querySelector(".numOfPers") ;
+const numOfPersLabel=document.querySelector(".numOfPersLabel") ;
+const numOfPersInput=document.querySelector(".numOfPersInput") ;
+let isActiveEditorMode=false ;
 
 const toggleEditorMode = function() {
     console.log("clickclick");
     editorModeButton.classList.toggle("clicked") ;
+    isActiveEditorMode = editorModeButton.classList.contains("clicked") 
+    numOfPers.classList.toggle("invisible") ;
+    numOfPersLabel.classList.toggle("invisible") ;
+    numOfPersInput.classList.toggle("invisible") ;
 };
 
 const hoverEditorModeButtonInfo = function() {
@@ -20,6 +29,7 @@ const hoverEditorModeButtonInfo = function() {
 };
 
 
-editorModeButtonContainer.addEventListener("click",()=>toggleEditorMode()) ;
-editorModeButtonContainer.addEventListener("mouseover",()=>hoverEditorModeButtonInfo()) ;
-editorModeButtonContainer.addEventListener("mouseout",()=>hoverEditorModeButtonInfo()) ;
+
+editorModeButtonContainerClickZone.addEventListener("click",()=>toggleEditorMode()) ;
+editorModeButtonContainerClickZone.addEventListener("mouseover",()=>hoverEditorModeButtonInfo()) ;
+editorModeButtonContainerClickZone.addEventListener("mouseout",()=>hoverEditorModeButtonInfo()) ;
