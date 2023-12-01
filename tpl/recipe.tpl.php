@@ -30,7 +30,9 @@ $isActiveEditionMode=false ;
                 <?php include "./tpl/toggleEditionButton.tpl.php"; ?>
 
                 <label class="numOfPersLabel invisible" for="numOfPersInput" > <label>
+                <form>
                 <input class="numOfPersInput invisible" data-persons= <?= $persons ?>  type="number" name="numOfPersInput" value=<?= $persons ?> > </input> 
+                </form>
                 personnes
             </h2>
             <img src="./images/<?=$image?>"/>
@@ -40,7 +42,7 @@ $isActiveEditionMode=false ;
         <div class="ingredients">
             <ul>
                 <?php foreach ($ingredients as $ingredient => $amount){?>
-                <li> <?php echo ucfirst("$ingredient : $amount" );?>  </li>
+                <li> <?php echo ucfirst("$ingredient :");?>  <span> <?=$amount[0]?> </span> <?php echo ($amount[1] ? $amount[1] : "" ) ; ?>  </li>
                 <?php }?>
             </ul> 
         </div>

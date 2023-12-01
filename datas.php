@@ -7,12 +7,12 @@ $recipes=
             "persons"=> 4,
             "ingredients"=> 
                 [
-                    "pâtes"=>"1 kilo",
-                    "crème fraîche"=>"50cl",
-                    "lardons"=>"500g",
-                    "vin blanc"=>"10cl",
-                    "oignons"=>"2",
-                    "sel, poivre, huile"=>"à votre goût",
+                    "pâtes"=>[1,"kilo"],
+                    "crème fraîche"=>[50,"cl"],
+                    "lardons"=>[500,"g"],
+                    "vin blanc"=>[10,"cl"],
+                    "oignons"=>[2,""],
+                    "sel, poivre, huile"=>["à votre goût",""],
                 ] ,
             "steps"=>
                 [
@@ -29,13 +29,13 @@ $recipes=
             "persons"=> 4,
             "ingredients"=>
                 [
-                    "riz déjà cuit"=>"600g",
-                    "chorizo"=>"300g",
-                    "lardons"=>"200g",
-                    "oeufs"=>"4",
-                    "oignons"=>"2",
-                    "sel, poivre, huile"=>"à votre goût",
-                    "etc"=>"à votre goût",
+                    "riz déjà cuit"=>[600,"g"],
+                    "chorizo"=>[300,"g"],
+                    "lardons"=>[200,"g"],
+                    "oeufs"=>["4",""],
+                    "oignons"=>["2",""],
+                    "sel, poivre, huile"=>["à votre goût",""],
+                    "etc"=>["à votre goût",""],
                 ] ,
             "steps"=>
                 [
@@ -54,11 +54,11 @@ $recipes=
             "persons"=> 4,
             "ingredients"=>
             [
-                "poulet"=>"1",
-                "pommes de terre"=>"500g",
-                "oignons"=>"1",
-                "sel, poivre, huile"=>"à votre goût",
-                "etc"=>"à votre goût",
+                "poulet"=>[1,""],
+                "pommes de terre"=>[500,"g"],
+                "oignons"=>[1,""],
+                "sel, poivre, huile"=>["à votre goût",""],
+                "etc"=>["à votre goût",""],
             ],
             "steps"=>
                 [
