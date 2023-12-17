@@ -3,7 +3,7 @@ require './kint.phar' ;
 require "./datasFromDb.php" ;
 require "./functions.php";
 $index=$_GET['id'];
-$recipe= $recipes[$index] ;
+$recipe= $recipes[$index-1] ;
 $title=$recipe['titre'] ;
 $pageTitle=$title;
 ?>

@@ -1,13 +1,18 @@
+//Utiliser la class pour ranger les données et s'y référer
+
 
 <?php
 //Variables crrspdt aux datas
+$id= $recipe['id'] ;
 $name= $recipe['titre'] ;
 $persons= $recipe['personne']  ;
 //Création tableau avec les ingredients de type "ingredient1=>pâtes"
 $ingredients= [] ;
 $amounts=[] ;
 $steps = [] ;
-$ingredAmountArr=[] ;
+$ingredAmountArr=[] ;//tabl.asso ingre=>quantite
+
+
 foreach($recipe as $RecipeProperty=>$value) {
     if (str_contains($RecipeProperty,'ingredient') && $value!=null) {
         $ingredients[] = $value ;
@@ -65,7 +70,35 @@ $isActiveEditionMode=false ;
                     <li>
                         <span class="ingredient"> <?=$ingredient?> :  </span>
                         <span class="amount" data-amount= <?= $amount?>> <?=$amount?> </span>
-                        <?php "uniteArecup" ; ?>
+                <?php  } ?>
+
+<!-- //recuperation de l'unité crrspdt en BDD -->
+<?php 
+
+
+    function dbFromIngredient($pdoRecettes,$ingredient) {
+        $requeteSQL = "SELECT * FROM ingredient WHERE `ingredient` LIKE '$ingredient'  ;" ;
+        $PDO_Statement =$pdoRecettes->query($requeteSQL) ;
+        $results = $PDO_Statement->fetchAll(PDO::FETCH_ASSOC);
+        return $results ;
+    }
+    // $tab1=dbFromIngredient($pdoRecettes,'riz')   ;
+    // d($tab1[2]['unite']);
+        foreach ($ingredients as $ingredient){
+        $ingredUnitesFromDb[]=dbFromIngredient($pdoRecettes,$ingredient)[0]  ;
+        }
+
+        //$ingredUnites = array_merge ($ingredUnitesFromDb) ;
+        // foreach ($ingredUnitesFromDb as $key=>$value) {
+        //     $ingredUnites[]=$value ;
+        // }
+        // foreach ($ingredUnites as $key=>$value) {
+        //     $ingrUnes[]=$value ;
+       //} 
+        d($ingredUnitesFromDb);
+        foreach ($ingredUnitesFromDb as $key=>$ingredUnite) { ?>
+            <span><?=$ingredUnite['ingredient']?></span>
+
                     </li>
                 <?php }?>
             </ul>

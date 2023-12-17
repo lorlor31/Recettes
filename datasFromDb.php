@@ -51,4 +51,4 @@ $recipes=[] ;
 foreach (dbFromRecette($pdoRecettes) as $recipeFromDb) {
     $recipes[]=$recipeFromDb ;
 }
-// d($recipes) ;
+
