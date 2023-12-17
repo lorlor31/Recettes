@@ -1,37 +1,57 @@
-<?php include "./datas.php";
+
+<?php
 //Variables crrspdt aux datas
-$name= $recipe['name'] ;
-$persons= $recipe['persons']  ;
-$ingredients=$recipe['ingredients'] ;
-$steps=$recipe['steps'] ;
+$name= $recipe['titre'] ;
+$persons= $recipe['personne']  ;
+//Création tableau avec les ingredients de type "ingredient1=>pâtes"
+$ingredients= [] ;
+$amounts=[] ;
+$steps = [] ;
+$ingredAmountArr=[] ;
+foreach($recipe as $RecipeProperty=>$value) {
+    if (str_contains($RecipeProperty,'ingredient') && $value!=null) {
+        $ingredients[] = $value ;
+    }
+    if (str_contains($RecipeProperty,'step') && $value!=null){
+        $steps[] = $value ;
+    }
+    if (str_contains($RecipeProperty,'quantite') && $value!=null) {
+        $amounts[] = $value ;
+    }
+}
+for ( $i=0 ; $i<count($ingredients) ; $i++) {
+    $ingredAmountArr[$ingredients[$i]]=$amounts[$i] ;
+    d($ingredAmountArr);
+}
 $image=$recipe['image'] ;
 //Variables nécessaires
 $isActiveEditionMode=false ;
 
 ?>
 
-<main> 
+<main>
 <!-- /*
  <h1 <?php if($name=='Riz au skia') { ?>
-    class="titreRose "> 
-            <?php }  ?> 
-            <?= $name ?> </h1>   
+    class="titreRose ">
+            <?php }  ?>
+            <?= $name ?> </h1>
             */ -->
     <h1>
-        <?= $name ?> 
+        <?= $name ?>
     </h1>
 
 
     <section class="section" id="firstPart">
         <div class="picture">
             <h2>
-                <?= $name ?> pour  
-                <span class="numOfPers" data-persons= <?= $persons ?> > <?= $persons ?> </span> 
+                <?= $name ?> pour
+                <span class="numOfPers" data-persons= <?= $persons ?> > <?= $persons ?> </span>
                 <?php include "./tpl/toggleEditionButton.tpl.php"; ?>
 
                 <label class="numOfPersLabel invisible" for="numOfPersInput" > <label>
                 <form>
-                <input class="numOfPersInput invisible" data-persons= <?= $persons ?>  type="number" name="numOfPersInput" value=<?= $persons ?> > </input> 
+                <input class="numOfPersInput invisible" data-persons= <?=$persons?> type="number" 
+                name="numOfPersInput" value=<?= $persons ?> > </input>
                 </form>
                 personnes
             </h2>
@@ -41,10 +61,14 @@ $isActiveEditionMode=false ;
 
         <div class="ingredients">
             <ul>
-                <?php foreach ($ingredients as $ingredient => $amount){?>
-                <li> <?php echo ucfirst("$ingredient :");?>  <span> <?=$amount[0]?> </span> <?php echo ($amount[1] ? $amount[1] : "" ) ; ?>  </li>
+                <?php foreach ($ingredAmountArr as $ingredient => $amount){?>
+                    <li>
+                        <span class="ingredient"> <?=$ingredient?> :  </span>
+                        <span class="amount" data-amount= <?= $amount?>> <?=$amount?> </span>
+                        <?php "uniteArecup" ; ?>
+                    </li>
                 <?php }?>
-            </ul> 
+            </ul>
         </div>
 
 

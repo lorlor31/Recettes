@@ -1,18 +1,20 @@
-<?php include "./datas.php";
- include "./functions.php";
+<?php 
+require './kint.phar' ;
+require "./datasFromDb.php" ;
+require "./functions.php";
 $index=$_GET['id'];
 $recipe= $recipes[$index] ;
-$name=$recipe['name'] ;
-$pageTitle=$name;
+$title=$recipe['titre'] ;
+$pageTitle=$title;
 ?>
 
 
 
 <?php  
-include "./tpl/header.tpl.php";
-include "./tpl/recipe.tpl.php";
-include "./tpl/nav.tpl.php";
-include "./tpl/backToHome.tpl.php"; 
+require "./tpl/header.tpl.php";
+require "./tpl/recipe.tpl.php";
+require "./tpl/nav.tpl.php";
+require "./tpl/backToHome.tpl.php"; 
 ?>
 <script src="js/script.js"></script>
 </body>

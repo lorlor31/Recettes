@@ -1,5 +1,5 @@
 <nav>
-    <?php foreach ($recipes as $index=>$recipe) { ?>
-        <a href="recipe.php?id=<?= $index ?>"><?=$recipe['name']?> </a>
+    <?php foreach ($recipes as $recipe) { ?>
+        <a href="recipe.php?id=<?= $recipe['id'] ?>"><?=$recipe['titre']?> </a>
     <?php } ?>
 </nav>
